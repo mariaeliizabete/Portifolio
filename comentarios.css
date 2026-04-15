@@ -1,0 +1,254 @@
+/* Define o conjunto de caracteres como UTF-8 (suporta acentos, etc.) */
+@charset "UTF-8";
+
+/* Importa a fonte Lato do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+/* Seletor universal: aplica a TODOS os elementos */
+*{
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+}
+
+/* Variáveis CSS (facilitam manutenção e padronização de cores) */
+:root{
+    --white: #fff; /* Branco */
+    --dark1: #34344e; /* Cor escura principal */
+    --dark2: #3a415a;
+    --dark3: #566981;
+    --dark4: #89a7b1;
+    --dark5: #cbdad5;
+    --dark6: #2f2f46;
+    --cyan1: #70e3ea; /* Cor destaque */
+}
+
+/* Estilo geral do corpo da página */
+body{
+    background-color: var(--dark1); /* Cor de fundo */
+    height: 100vh; /* Altura total da tela */
+    font-family: "Lato"; /* Define a fonte */
+}
+
+/* Estilização do cabeçalho */
+header{
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-around; /* Espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente */
+    gap: 1rem; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    padding: .8rem; /* Espaçamento interno */
+    background-color: var(--dark6); /* Cor de fundo */
+    min-height: 50px; /* Altura mínima */
+}
+
+/* Container da imagem do logo */
+.box-img{
+    height: 100%; /* Ocupa toda altura do elemento pai */
+}
+
+/* Estilo da imagem do logo */
+.img-logo{
+    max-width: 60px; /* Largura máxima */
+    height: 100%; /* Altura proporcional */
+}
+
+/* Menu de navegação */
+nav{
+    display: flex; /* Layout flexível */
+    gap: 2rem; /* Espaço entre links */
+    justify-content: center; /* Centraliza */
+    align-items: center; /* Alinha verticalmente */
+    flex-wrap: wrap; /* Permite quebra */
+}
+
+/* Links do menu */
+.nav-links{
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--white); /* Cor branca */
+}
+
+/* Efeito ao passar o mouse */
+.nav-links:hover{
+    color: var(--dark4); /* Muda cor */
+    transition: .4s; /* Animação suave */
+    text-decoration: underline; /* Sublinha */
+}
+
+/* Container dos botões */
+.box-btn-actions{
+    display: flex;
+    gap: 1rem; /* Espaço entre botões */
+}
+
+/* Estilo geral para botões e links com aparência de botão */
+button, .link-action{
+    padding: .6rem; /* Espaçamento interno */
+    font-size: .9rem; /* Tamanho da fonte */
+    border-radius: 6px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+    transition: .4s; /* Animação suave */
+}
+
+/* Botão principal */
+.btn-actions{
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid var(--white); /* Borda branca */
+    color: var(--white); /* Texto branco */
+    width: 100px; /* Largura fixa */
+}
+
+/* Efeito hover do botão */
+.btn-actions:hover{
+    background-color: var(--dark3); /* Muda fundo */
+    border: 1px solid var(--dark3); /* Muda borda */
+}
+
+/* Ajustes adicionais para botão e link */
+button, .link-action{
+    text-decoration: none; /* Remove sublinhado */
+    width: 200px; /* Largura fixa */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Container principal */
+main{
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    gap: 2rem; /* Espaço entre seções */
+}
+
+/* Estilo geral das seções */
+section{
+    padding: 4rem; /* Espaçamento interno */
+}
+
+/* Primeira seção (hero) */
+.first-section{
+    display: flex;
+    justify-content: space-evenly; /* Distribui espaço */
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 600px; /* Altura mínima */
+}
+
+/* Divs internas da primeira seção */
+.first-section > div{
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    gap: 1rem;
+    min-width: 300px; /* Largura mínima */
+}
+
+/* Título principal */
+h1{
+    font-size: 2rem;
+    color: var(--white);
+    letter-spacing: 8px; /* Espaço entre letras */
+}
+
+/* Destaque de texto */
+strong{
+    color: var(--cyan1); /* Cor diferente */
+}
+
+/* Parágrafos da primeira seção */
+.first-section p{
+    color: var(--white);
+}
+
+/* Container da imagem principal */
+.box-img-main{
+    max-width: 450px;
+    padding: 1rem;
+}
+
+/* Imagem de perfil */
+.img-perfil{
+    border-radius: 50%; /* Deixa circular */
+    width: 100%; /* Responsiva */
+}
+
+/* Segunda e quarta seção (mesmo estilo) */
+:is(.second-section, .fourth-section){
+    background-color: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* Lista da segunda seção */
+.second-section ul{
+    list-style: none; /* Remove marcadores */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Itens da lista */
+.second-section ul li{
+    color: var(--dark4);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Hover nos itens */
+.second-section ul li:hover{
+    color: var(--dark5);
+    transition: .4s;
+    cursor: default;
+}
+
+/* Título de seção */
+.title{
+    color: var(--dark5);
+}
+
+/* Terceira seção */
+.third-section{
+    display: flex; 
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Container interno */
+.third-section> div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Imagens da terceira seção */
+.third-section> div img{
+    width: 500px;
+    border-radius: 10px;
+}
+
+/* Texto da terceira seção */
+.third-section> div p{
+    max-width: 600px;
+    color: var(--white);
+    text-align: justify;
+}
+
+/* Rodapé */
+footer{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Divs dentro do rodapé */
+footer>div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
